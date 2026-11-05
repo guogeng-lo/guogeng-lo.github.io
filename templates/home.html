@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{page_title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<link rel="stylesheet" href="{{prefix}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{prefix}}assets/css/style.css">
+<script src="{{prefix}}assets/js/reveal.js" defer></script>
+</head>
+<body class="home">
+<a class="skip" href="#works">跳到作品</a>
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-name"><span class="name-zh">{{site_name}}</span><span class="name-en">{{site_name_en}}</span></h1>
+    <div class="hero-text">
+      <p class="hero-tagline">{{tagline}}</p>
+      <div class="hero-intro">{{intro}}</div>
+      <nav class="hero-links" aria-label="外部連結">{{links}}</nav>
+    </div>
+  </div>
+</header>
+<main id="works">
+  <section class="section works">
+    <div class="wrap">
+      <h2 class="section-title">作品</h2>
+      <div class="work-list">{{featured}}</div>
+    </div>
+  </section>
+  {{others}}
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>{{site_name}}的作品集，最後更新{{latest_updated}}。</p>
+    <nav aria-label="外部連結">{{links}}</nav>
+  </div>
+</footer>
+</body>
+</html>

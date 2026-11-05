@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{page_title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<link rel="stylesheet" href="{{prefix}}assets/css/tokens.css">
+<link rel="stylesheet" href="{{prefix}}assets/css/style.css">
+<script src="{{prefix}}assets/js/reveal.js" defer></script>
+</head>
+<body class="work" data-accent="{{accent}}">
+<a class="skip" href="#main">跳到內容</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="{{prefix}}">{{site_name}}</a>
+    <a class="back" href="{{prefix}}#works">全部作品</a>
+  </div>
+</header>
+<main id="main">
+  <header class="work-head">
+    <div class="wrap">
+      <p class="meta">{{meta}}</p>
+      <h1 class="work-title">{{title}}</h1>
+      <p class="work-summary">{{summary}}</p>
+      <p class="chips">{{technologies}}</p>
+      <p class="actions">{{links}}</p>
+    </div>
+  </header>
+  <section class="results" aria-label="成果">
+    <div class="wrap">
+      {{gallery}}
+      {{metrics}}
+      {{evidence}}
+    </div>
+  </section>
+  <div class="details">
+    {{problem}}
+    {{solution}}
+    {{contribution}}
+    {{ai}}
+    {{tech}}
+    {{sources}}
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>這一頁最後更新{{updated}}。</p>
+    <nav aria-label="作品集"><a href="{{prefix}}">回到{{site_name}}的作品集</a></nav>
+  </div>
+</footer>
+</body>
+</html>

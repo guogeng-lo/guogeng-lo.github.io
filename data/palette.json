@@ -1,0 +1,18 @@
+{
+  "base": {
+    "bg": "#EDEFF1",
+    "surface": "#FFFFFF",
+    "text": "#131B27",
+    "muted": "#4B5566",
+    "line": "#C9CFD7",
+    "hero_bg": "#0D1420",
+    "hero_text": "#EDF0F5",
+    "hero_muted": "#9DA8B9"
+  },
+  "accents": {
+    "mask": { "text": "#0B655D", "tag": "#D5ECE8", "decor": "#2E9C8C" },
+    "lamp": { "text": "#8A4B00", "tag": "#F4E3C6", "decor": "#D9902B" },
+    "oxblood": { "text": "#8E2C2C", "tag": "#F3DEDB", "decor": "#B5473F" },
+    "violet": { "text": "#5A3E9C", "tag": "#E6E0F4", "decor": "#7D5BD0" }
+  }
+}

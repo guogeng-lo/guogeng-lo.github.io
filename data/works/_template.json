@@ -1,0 +1,63 @@
+{
+  "id": "example-work",
+  "title": "待填：作品名稱",
+  "summary": "待填：一句話介紹，60字以內",
+  "status": "prototype",
+  "status_evidence": [],
+  "updated": "2026-11-05",
+  "context": "course",
+  "course": "待填：課程名稱",
+  "period": "2026-10",
+  "origins": [
+    { "type": "original", "note": "待填：自己建立的部分", "credit_ids": [] },
+    { "type": "course_starter", "note": "待填：沿用課程範例的哪些部分", "credit_ids": ["example-starter"] }
+  ],
+  "dependencies": [
+    { "name": "待填：函式庫名稱", "license": "待填：授權", "url": "https://example.com" }
+  ],
+  "credits": [
+    {
+      "id": "example-starter",
+      "name": "待填：課程範例名稱",
+      "creator": null,
+      "url": null,
+      "license": null,
+      "usage": "待填：沿用了哪些部分",
+      "permission_status": "unknown",
+      "rights_basis": null
+    }
+  ],
+  "featured": true,
+  "order": 10,
+  "accent": "待填：palette.json裡的重點色名稱",
+  "technologies": ["待填：實際用到的技術"],
+  "problem": "待填：要解決的問題",
+  "solution": "待填：怎麼解決",
+  "contribution": ["待填：我負責的一件事"],
+  "ai_collaboration": {
+    "tools": ["待填：AI工具名稱"],
+    "my_decisions": ["待填：我發現的問題或做的決定"],
+    "ai_work": ["待填：AI做了什麼"],
+    "verification": ["待填：怎麼驗證、誰驗的"]
+  },
+  "metrics": [
+    {
+      "value": "待填",
+      "label": "待填：這個數字是什麼",
+      "condition": "待填：在什麼情況下得到的",
+      "source": { "file": "待填：repo裡的紀錄路徑，或改成url" }
+    }
+  ],
+  "links": [
+    { "label": "待填：連結名稱", "url": "https://example.com" }
+  ],
+  "images": [
+    { "file": "assets/img/example-work/待填.png", "alt": "待填：描述畫面內容", "caption": "待填：選填的圖說，不要就刪掉這個欄位" }
+  ],
+  "tech_notes": {
+    "architecture": "待填：整個東西分成哪幾塊，資料怎麼流動",
+    "decisions": ["待填：重要的決定和原因"],
+    "verified": ["待填：實際驗證過的功能和怎麼驗證"],
+    "next": ["待填：還沒做到或下一步要學的"]
+  }
+}

@@ -1,0 +1,34 @@
+:root {
+  --bg: #EDEFF1;
+  --hero-bg: #0D1420;
+  --hero-muted: #9DA8B9;
+  --hero-text: #EDF0F5;
+  --line: #C9CFD7;
+  --muted: #4B5566;
+  --surface: #FFFFFF;
+  --text: #131B27;
+}
+
+[data-accent="lamp"] {
+  --accent-text: #8A4B00;
+  --accent-tag: #F4E3C6;
+  --accent-decor: #D9902B;
+}
+
+[data-accent="mask"] {
+  --accent-text: #0B655D;
+  --accent-tag: #D5ECE8;
+  --accent-decor: #2E9C8C;
+}
+
+[data-accent="oxblood"] {
+  --accent-text: #8E2C2C;
+  --accent-tag: #F3DEDB;
+  --accent-decor: #B5473F;
+}
+
+[data-accent="violet"] {
+  --accent-text: #5A3E9C;
+  --accent-tag: #E6E0F4;
+  --accent-decor: #7D5BD0;
+}
