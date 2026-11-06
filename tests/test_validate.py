@@ -302,6 +302,12 @@ def _(r):
     edit_json(r, PROTO, lambda d: d.update(summary="改過的介紹"))
 
 
+@case("產生的網頁被改成CRLF換行", 1, "只有換行不同")
+def _(r):
+    p = r / "index.html"
+    p.write_bytes(p.read_bytes().replace(b"\n", b"\r\n"))
+
+
 @case("範本留著「待填」：範本本來就是這樣，不能因此報錯", 0, "錯誤0個")
 def _(r):
     pass

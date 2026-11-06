@@ -1,5 +1,29 @@
 # 修改紀錄
 
+## 2026-11-06 修改：my-dungeon-game（依最新版規則修正PR #1）
+- 合併main的6e87267ae123a3d5588bde1a34c2f2d6138f3e60並重讀AGENTS.md全文；保留main與PR原有的修改紀錄，解決changelog的合併衝突
+- 修改`data/works/my-dungeon-game.json`：移除「依素材筆記」「素材筆記記錄」「這次作品頁整理」等整理過程文字；內容來源仍是`docs/raw/my-dungeon-game/notes.md`與該資料夾的5張試玩截圖，這次未重新編譯或執行遊戲
+- `origins.note`只保留作品來源；程式的AI協作保留在`ai_collaboration`。刪除「沒有課堂作業的題目限制」等不必要的延伸說明
+- 刪除原先由AI推定的測試紀錄、自動測試與效能量測計畫。`tech_notes.next`改成「目前沒有後續開發計畫。」，依據是使用者2026-11-06在本次對話的直接回覆「目前沒有後續開發計畫。」；筆記所述沒有自動測試的事實保留在驗證說明
+- 執行既有`build.py`重新產生`works/my-dungeon-game/index.html`；沒有手動修改產出，也沒有修改其他作品資料、圖片、模板、共用樣式或色票
+- 套用main新增的`.gitattributes`固定LF；這次編輯的文字檔與重新建置的產出均確認使用LF，沒有新增本機專用換行規則
+- validate.py結果：預設比對HEAD為4個作品，錯誤0個、警告0個；另以`--base origin/main`檢查整份PR為錯誤0個、警告1個，警告原文：
+  - `[警告] data/works/my-dungeon-game.json：新作品（origin/main裡沒有），狀態是prototype，請人工確認`
+- 警告沿用使用者2026-11-06「幫我新增一個作品：終焉之刃」的指示確認；本次沒有修改prototype狀態或第三方授權狀態
+- 執行main更新後的`tests/test_validate.py`：32個情境全部通過，包含CRLF換行錯誤訊息的新增情境；沒有另外修改建置、驗證或測試程式
+- 瀏覽器確認：首頁與作品頁在電腦版1372像素及手機版375像素均無水平溢出，首頁連結可開啟作品頁
+- 需要人工確認：作品描述、原型狀態、素材來源與截圖是否符合實際且沒有個資；後續計畫已依使用者直接回覆填寫
+- 誰做的：Codex依使用者要求檢查並修正PR #1
+
+## 2026-11-06 修改：AGENTS.md、validate.py（擴充測試1之後）
+- 擴充測試1（Codex新增終焉之刃，PR #1）發現三件事，照著修規則：
+  - Windows的Git把產生的網頁改成CRLF換行，validate.py逐檔比對報錯：新增.gitattributes固定LF；validate.py遇到只有換行不同時，改成直接說明原因
+  - 作品頁出現「依素材筆記」這類整理過程的話：第8節規定頁面只寫作品本身，來源記在changelog
+  - 「還沒做到的」有一部分是AI自己訂的計畫：第8節規定next每一條都要有素材或使用者講過的根據
+- tests/test_validate.py加一個CRLF的情境
+- validate.py結果：錯誤0個、警告0個
+- 誰做的：Claude依使用者同意修改
+
 ## 2026-11-06 新增：my-dungeon-game
 - 從main的9f61985735bedf250885ca7e8cafb05b52427a38開始，重新讀完最新版AGENTS.md
 - 依`docs/raw/my-dungeon-game/notes.md`新增`data/works/my-dungeon-game.json`，整理終焉之刃的玩法、本人貢獻、Claude協作與技術筆記；狀態先沿用範本的prototype，未宣稱已完成

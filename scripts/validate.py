@@ -505,7 +505,10 @@ def check_rebuild():
             error(rel, "重新建置不會產生這個檔案，可能是刪掉的作品留下的舊頁面，請跑build.py")
         for rel in sorted(expected & actual):
             if not filecmp.cmp(tmp / rel, ROOT / rel, shallow=False):
-                error(rel, "內容和重新建置的結果不同：可能被手動改過，或改了資料後沒有跑build.py")
+                if (tmp / rel).read_bytes() == (ROOT / rel).read_bytes().replace(b"\r\n", b"\n"):
+                    error(rel, "只有換行不同（CRLF和LF），可能是Windows的Git改了換行：確認有.gitattributes，再跑build.py")
+                else:
+                    error(rel, "內容和重新建置的結果不同：可能被手動改過，或改了資料後沒有跑build.py")
 
 
 def git(*args):
