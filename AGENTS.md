@@ -313,6 +313,8 @@ python3 tests/test_validate.py     validate.py的反向測試，改過build.py�
 - 外部連結點下去是否正常
 - 以前已經commit過、後來撤下的內容，Git歷史裡還看得到
 
+**commit的規定：**作者用使用者的GitHub帳號，commit說明裡不要加`Co-Authored-By`之類的AI署名，repo的貢獻者只顯示使用者本人。AI怎麼協助的，照第7節寫在作品頁，不寫在commit裡。
+
 **`docs/changelog.md`的格式**，最新的放最上面：
 
 ```

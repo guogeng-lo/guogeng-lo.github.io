@@ -1,5 +1,10 @@
 # 修改紀錄
 
+## 2026-11-06 修改：AGENTS.md
+- 第10節加上commit的規定：不要加AI署名，貢獻者只顯示使用者本人
+- validate.py結果：錯誤0個、警告0個
+- 誰做的：Claude依使用者的要求修改
+
 ## 2026-11-06 修改：contextmask、last-train
 - 改了data/works/contextmask.json、data/works/last-train.json的contribution第一條：寫清楚作業只規定了什麼、題目是自己訂的；updated改成2026-11-06
 - 重新產生index.html、works/contextmask/、works/last-train/、sitemap.xml
