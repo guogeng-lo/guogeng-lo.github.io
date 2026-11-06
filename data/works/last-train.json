@@ -56,7 +56,7 @@
       "id": "demo-07c",
       "name": "課程範例07c：Planning",
       "creator": "蔡炎龍",
-      "url": "https://github.com/yenlung/Generative-AI/blob/main/Agent03_Planning.ipynb",
+      "url": null,
       "license": null,
       "usage": "呼叫模型時reasoning_effort=\"low\"的寫法",
       "permission_status": "not_needed",

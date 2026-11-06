@@ -1,4 +1,5 @@
 import json
+import os
 import shutil
 import struct
 import subprocess
@@ -76,7 +77,8 @@ def fixture_works(accents):
 
 
 def run(cmd, cwd):
-    return subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8")
+    env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
+    return subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, encoding="utf-8", env=env)
 
 
 def git(root, *args):
@@ -306,6 +308,12 @@ def _(r):
 def _(r):
     p = r / "index.html"
     p.write_bytes(p.read_bytes().replace(b"\n", b"\r\n"))
+
+
+@case("用底線檔名把草稿藏在data/works/", 1, "只有_template.json可以用底線開頭")
+def _(r):
+    data = json.loads((r / "data/works/_template.json").read_text(encoding="utf-8"))
+    write_json(r, "data/works/_unreleased.json", data)
 
 
 @case("範本留著「待填」：範本本來就是這樣，不能因此報錯", 0, "錯誤0個")

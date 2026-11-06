@@ -237,7 +237,8 @@ def render_sources(site, work):
                 detail.append(f'授權：{esc(c["license"])}')
             detail.append(esc(PERMISSION_LABEL[c["permission_status"]]))
             spans = "".join(f"<span>{d}</span>" for d in detail)
-            items += f'<li><p class="credit-name">{name}</p><p class="meta">{spans}</p><p>{esc(c["usage"])}</p></li>'
+            basis = f'<p class="muted">公開依據：{esc(c["rights_basis"])}</p>' if c.get("rights_basis") else ""
+            items += f'<li><p class="credit-name">{name}</p><p class="meta">{spans}</p><p>{esc(c["usage"])}</p>{basis}</li>'
         body += f'<h3>原作者與授權</h3><ul class="list">{items}</ul>'
     deps = work.get("dependencies", [])
     if deps:

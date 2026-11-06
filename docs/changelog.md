@@ -1,5 +1,14 @@
 # 修改紀錄
 
+## 2026-11-06 修改：validate.py、build.py、tests、last-train
+- 交件前另一個AI審查找到三個問題，照著修：
+  - validate.py跳過所有底線開頭的JSON，草稿可以用`_unreleased.json`這種檔名藏在data/works/：改成只有_template.json例外，其他底線檔名報錯；tests加一個情境
+  - last-train的demo-07c連結是404，找不到可以核對的公開網址：照第6節改成null
+  - Windows照README跑tests/test_validate.py，子程序的中文輸出會解碼錯誤：測試程式改成指定子程序用UTF-8；README補上PowerShell的設定方式
+- 作品頁的「原作者與授權」多顯示每筆credits的rights_basis，讓公開範圍直接寫在頁面上
+- validate.py結果：錯誤0個、警告0個；tests/test_validate.py共33個情境全部通過
+- 誰做的：Claude依使用者轉來的審查意見修改
+
 ## 2026-11-06 修改：docs/extension-test.md
 - 記錄四輪擴充測試的原文和判定：測試1（大致通過，抓到3個問題）、測試1-2（通過）、測試2（沒通過）、測試2-2（通過）
 - validate.py結果：錯誤0個、警告0個

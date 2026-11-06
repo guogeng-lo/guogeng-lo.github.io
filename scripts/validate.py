@@ -581,7 +581,10 @@ def main():
     check_template()
     works, used_files, seen = [], set(), set()
     for path in sorted((ROOT / "data" / "works").glob("*.json")):
+        if path.name == "_template.json":
+            continue
         if path.name.startswith("_"):
+            error(f"data/works/{path.name}", "只有_template.json可以用底線開頭；草稿要放在drafts/，不能用底線檔名藏在data/works/")
             continue
         result = check_work(path, palette, seen)
         if result:

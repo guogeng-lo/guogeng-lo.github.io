@@ -16,4 +16,4 @@ python3 scripts/validate.py
 python3 tests/test_validate.py
 ```
 
-只用Python標準函式庫，不用安裝套件。
+只用Python標準函式庫，不用安裝套件。在Windows的PowerShell執行前，可以先打`$env:PYTHONUTF8="1"`，避免中文輸出出現編碼錯誤。
