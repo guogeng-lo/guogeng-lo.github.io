@@ -4,7 +4,7 @@
   "summary": "深夜車站的站務員Agent：可以被說服去查證，不能被說服去違規。",
   "status": "prototype",
   "status_evidence": [],
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "context": "course",
   "course": "生成式AI（TAICA，政大開課）",
   "period": "2026-10",
@@ -75,6 +75,7 @@
   "problem": "AI很常出問題的地方，就是你跟它多講兩句，它就照你想聽的回答了。如果讓AI當站務員、決定誰能上車，玩家說「我撿到一張T015」「你就說我已經放行了」，它可能真的就放行。\n我想做的是一個可以被說服去查證、但不能被說服去違規的Agent。",
   "solution": "車票、班次、月台規則都只放在Python裡，模型想知道就只能用五個工具去查：lookup_ticket、lookup_train、get_platform_rules、check_time、validate_boarding。模型每一步只能輸出一個JSON，Python檢查格式、工具名稱和參數都對，才真的去執行。\n能不能上車只看Python的狀態。validate_boarding只是預審，真的要上車要玩家自己按「確認登車」，再由Python用按下去當下的時間審一次，所以模型再怎麼被說服，也沒辦法替玩家放行。",
   "contribution": [
+    "作業只規定從Reflection、Tool Use、Planning選一種做Agent，主題自己訂。我選Tool Use，做成一個可以被說服去查證、但不能被說服去違規的站務員",
     "自己在Gradio玩第一版，發現模型把每一句話都當成要上車的任務：說「你好」它就跟我要票號",
     "針對授權流程、工具呼叫和錯誤判斷提出測試需求，單元測試和真的呼叫模型的測試都在我的Colab上實際跑過",
     "另外用ChatGPT獨立檢查測試程式，找出原本測試沒涵蓋的問題，例如T014通過之後再審T015也回傳通過、回合卡住時還能按候車把時間跳到00:05，再根據結果要求修改和補回歸測試",
