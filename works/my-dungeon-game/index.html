@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>終焉之刃｜羅國耕</title>
+<meta name="description" content="邊學Java邊做的2D平台跳躍遊戲：一路往上爬，拿到二段跳和光束槍，再挑戰深淵領主。">
+<link rel="canonical" href="https://guogeng-lo.github.io/works/my-dungeon-game/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script src="../../assets/js/reveal.js" defer></script>
+</head>
+<body class="work" data-accent="oxblood">
+<a class="skip" href="#main">跳到內容</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="../../">羅國耕</a>
+    <a class="back" href="../../#works">全部作品</a>
+  </div>
+</header>
+<main id="main">
+  <header class="work-head">
+    <div class="wrap">
+      <p class="meta"><span class="status status-prototype">原型</span><span>個人專案</span><span>2025</span></p>
+      <h1 class="work-title">終焉之刃</h1>
+      <p class="work-summary">邊學Java邊做的2D平台跳躍遊戲：一路往上爬，拿到二段跳和光束槍，再挑戰深淵領主。</p>
+      <p class="chips"><span class="chip">Java</span><span class="chip">Swing</span><span class="chip">物件導向</span></p>
+      <p class="actions"></p>
+    </div>
+  </header>
+  <section class="results" aria-label="成果">
+    <div class="wrap">
+      <div class="gallery"><figure class="shot reveal"><img src="../../assets/img/my-dungeon-game/03-boss-fight.png" alt="魔王戰畫面：黃色玩家站在平台上，右側是紅色的深淵領主·薩麥爾，周圍有紫色子彈，下方顯示魔王血條，左上角玩家生命值為75/100" loading="eager"><figcaption>挑戰深淵領主·薩麥爾。下方是魔王血條，左上角顯示玩家的生命值、能力和血瓶。</figcaption></figure><figure class="shot reveal"><img src="../../assets/img/my-dungeon-game/01-boss-gate.png" alt="黃色玩家站在營火旁的平台上，左側顯示Checkpoint已儲存，右側的傳送門標示進入魔王之間" loading="lazy"><figcaption>營火是存檔點，旁邊的入口通往魔王之間。</figcaption></figure><figure class="shot reveal"><img src="../../assets/img/my-dungeon-game/02-boss-intro.png" alt="魔王出場畫面：深色平台場景中央以紅字顯示深淵領主·薩麥爾，左上角保留玩家生命值與能力資訊" loading="lazy"><figcaption>進入魔王之間後，先顯示魔王名稱。</figcaption></figure><figure class="shot reveal"><img src="../../assets/img/my-dungeon-game/04-nightmare-slain.png" alt="擊敗魔王後，畫面中央以黃色大字顯示NIGHTMARE SLAIN，左上角顯示分數10000、生命值100/100和剩餘血瓶2" loading="lazy"><figcaption>打倒魔王後出現NIGHTMARE SLAIN，接著進入狂歡紓壓時間。</figcaption></figure><figure class="shot reveal"><img src="../../assets/img/my-dungeon-game/05-victory.png" alt="通關結算畫面顯示VICTORY ACHIEVED、通關時間01:12.20、最終分數10000和剩餘血瓶2，下方提示按Enter重新輪迴或按Esc退出遊戲" loading="lazy"><figcaption>這次試玩的結算：通關時間01:12.20、最終分數10000、剩餘血瓶2。這是單次遊玩紀錄，不代表完整測試或效能量測。</figcaption></figure></div>
+      
+      
+    </div>
+  </section>
+  <div class="details">
+    <section class="section "><div class="wrap split"><h2 class="section-title">要解決的問題</h2><div class="section-body"><p>想邊學Java邊做一個自己想玩的遊戲：玩家一路往上爬，途中取得能力、越過不同平台和敵人，最後挑戰魔王。</p></div></div></section>
+    <section class="section "><div class="wrap split"><h2 class="section-title">怎麼解決</h2><div class="section-body"><p>做成2D平台跳躍遊戲，畫面會顯示距離頂峰還有幾公尺。路上有彈跳、移動、易碎和尖刺平台，小怪會衝過來或射子彈。玩家可以取得二段跳和光束槍，並在營火存檔；起點附近也有魔王捷徑，遊戲會提示先拿到能力再去。</p><p>進入魔王之間後，挑戰會施放地火、震波和審判之劍的深淵領主·薩麥爾。打贏後先出現NIGHTMARE SLAIN，再進入可以自由攻擊的狂歡紓壓時間，最後顯示通關時間、最終分數和剩餘血瓶。</p><p>操作方式：方向鍵移動和跳躍，下加上跳下平台，Z衝刺、X斬擊、C射擊、V喝血瓶。</p></div></div></section>
+    <section class="section "><div class="wrap split"><h2 class="section-title">我負責的部分</h2><div class="section-body"><ul class="list"><li>決定遊戲的點子、玩法和要加入的機制</li><li>自己反覆試玩，發現問題後請Claude修正，再重新測試</li><li>自己調整數值，例如魔王血量和技能時間</li><li>修改部分程式，邊做邊學Java</li></ul></div></div></section>
+    <section class="section "><div class="wrap split"><h2 class="section-title">AI協作</h2><div class="section-body"><div class="groups"><div class="group"><h3>用到的AI工具</h3><ul class="list"><li>Claude</li></ul></div><div class="group"><h3>我做的判斷</h3><ul class="list"><li>決定遊戲玩法，並透過試玩指出需要修改的地方</li><li>自己調整魔王血量、技能時間等數值</li></ul></div><div class="group"><h3>AI做的事</h3><ul class="list"><li>Claude完成整體程式架構，並協助除錯</li></ul></div><div class="group"><h3>怎麼驗證</h3><ul class="list"><li>由我手動反覆試玩，發現問題叫AI修，修完再玩一次；沒有自動測試</li><li>提供5張自己試玩時的截圖，記錄魔王入口、出場、戰鬥、擊敗魔王和通關結算</li></ul></div></div></div></div></section>
+    <section class="section "><div class="wrap split"><h2 class="section-title">技術筆記</h2><div class="section-body"><div class="group"><h3>架構</h3><p>程式集中在一個Java檔，約1,500行。主畫面使用JPanel（Swing用來顯示介面的面板），由Timer（定時觸發更新的計時器）每16毫秒更新一次再重畫。</p><p>遊戲分成選單、遊戲中、打贏後的狂歡時間、死亡和結算等狀態。玩家、子彈、斬擊、道具、敵人、魔王和特效都繼承GameObject（共用的遊戲物件類別），每一格輪流呼叫update更新，再畫出來。平台也透過繼承分成彈跳、移動、易碎和尖刺幾種。</p></div><div class="group"><h3>做過的決定</h3><ul class="list"><li>用不同的遊戲狀態區分選單、遊玩、狂歡時間、死亡與結算</li><li>讓玩家、攻擊、道具、敵人和特效共用GameObject，平台再透過繼承分出不同種類</li><li>依照自己的試玩結果調整魔王血量和技能時間；沒有使用自動測試</li></ul></div><div class="group"><h3>驗證過的部分</h3><ul class="list"><li>由我反覆手動試玩，發現問題後請Claude修正，再重新試玩；沒有自動測試</li><li>5張試玩截圖記錄了魔王入口、出場、戰鬥、NIGHTMARE SLAIN和通關結算；結算顯示這一次試玩的時間01:12.20、分數10000、剩餘血瓶2</li></ul></div><div class="group"><h3>還沒做到的</h3><ul class="list"><li>目前沒有後續開發計畫。</li></ul></div></div></div></section>
+    <section class="section sources"><div class="wrap split"><h2 class="section-title">來源與授權</h2><div class="section-body"><h3>內容來源</h3><ul class="list"><li><strong>自己建立</strong>：自己做好玩的個人遊戲，不是課堂作業，沒有使用別人的素材。原始碼不公開。</li></ul></div></div></section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2026 羅國耕・這一頁最後更新2026-11-06</p>
+    <nav aria-label="作品集"><a href="../../">回到羅國耕的作品集</a></nav>
+  </div>
+</footer>
+</body>
+</html>
