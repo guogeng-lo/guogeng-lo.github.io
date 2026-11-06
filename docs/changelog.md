@@ -1,5 +1,11 @@
 # 修改紀錄
 
+## 2026-11-06 新增素材：docs/raw/my-dungeon-game/
+- 放進終焉之刃的素材筆記和5張使用者自己玩的截圖，給擴充測試用；使用者同意公開
+- AGENTS.md第2、3節加上`docs/raw/<id>/`可以放素材，會公開
+- validate.py結果：錯誤0個、警告0個
+- 誰做的：Claude依使用者的指示整理
+
 ## 2026-11-06 修改：網站頁尾、LICENSE
 - 新增LICENSE：著作權所有，未經同意不得重製或使用；標明出處的第三方內容依原本的授權
 - templates/home.html、templates/work.html的頁尾加上「© 2026 羅國耕」，重新產生所有頁面

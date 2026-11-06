@@ -49,6 +49,7 @@ scripts/
 tests/
   test_validate.py     validate.py的反向測試：故意弄壞資料，看它會不會擋
 docs/
+  raw/<id>/            使用者給的原始素材（會公開）
   changelog.md         每次修改的紀錄
   extension-test.md    擴充測試的原始紀錄
 index.html             ← 由build.py產生
@@ -65,7 +66,7 @@ drafts/                不公開的草稿和素材，不能提交
 
 先做這三步：
 
-1. 確認素材夠不夠（第8節）。素材可以是使用者在對話裡給的，也可以是放在`drafts/<id>/`的筆記和圖片。不夠就停下來問，不要自己補。
+1. 確認素材夠不夠（第8節）。素材可以是使用者在對話裡給的、放在`drafts/<id>/`的筆記和圖片，或放在`docs/raw/<id>/`的筆記和圖片。`docs/raw/`會跟著repo公開，只能放可以公開的東西；作品要用的圖片要複製到`assets/img/<id>/`。不夠就停下來問，不要自己補。
 2. 決定代號`id`：只能用英文小寫、數字和連字號，例如`last-train`。不能和現有作品重複。
 3. 判斷能不能公開，三個條件都要符合：需要的來源都查清楚；每筆`credits`的`permission_status`都是`not_needed`或`granted`，而且是使用者提供的依據；有真實截圖。
 
