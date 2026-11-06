@@ -1,5 +1,14 @@
 # 修改紀錄
 
+## 2026-11-06 修改：AGENTS.md、validate.py（擴充測試1之後）
+- 擴充測試1（Codex新增終焉之刃，PR #1）發現三件事，照著修規則：
+  - Windows的Git把產生的網頁改成CRLF換行，validate.py逐檔比對報錯：新增.gitattributes固定LF；validate.py遇到只有換行不同時，改成直接說明原因
+  - 作品頁出現「依素材筆記」這類整理過程的話：第8節規定頁面只寫作品本身，來源記在changelog
+  - 「還沒做到的」有一部分是AI自己訂的計畫：第8節規定next每一條都要有素材或使用者講過的根據
+- tests/test_validate.py加一個CRLF的情境
+- validate.py結果：錯誤0個、警告0個
+- 誰做的：Claude依使用者同意修改
+
 ## 2026-11-06 新增素材：docs/raw/my-dungeon-game/
 - 放進終焉之刃的素材筆記和5張使用者自己玩的截圖，給擴充測試用；使用者同意公開
 - AGENTS.md第2、3節加上`docs/raw/<id>/`可以放素材，會公開
