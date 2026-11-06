@@ -1,5 +1,12 @@
 # 修改紀錄
 
+## 2026-11-06 修改：網站頁尾、LICENSE
+- 新增LICENSE：著作權所有，未經同意不得重製或使用；標明出處的第三方內容依原本的授權
+- templates/home.html、templates/work.html的頁尾加上「© 2026 羅國耕」，重新產生所有頁面
+- AGENTS.md第2節的檔案結構加上LICENSE
+- validate.py結果：錯誤0個、警告0個
+- 誰做的：Claude依使用者的要求修改
+
 ## 2026-11-06 修改：AGENTS.md
 - 第10節加上commit的規定：不要加AI署名，貢獻者只顯示使用者本人
 - validate.py結果：錯誤0個、警告0個

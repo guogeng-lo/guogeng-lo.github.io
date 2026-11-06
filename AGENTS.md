@@ -28,6 +28,7 @@
 AGENTS.md              這份規則（主文件）
 CLAUDE.md              只寫「請先讀AGENTS.md」，不放其他規則
 README.md              給人看的專案說明
+LICENSE                著作權聲明：保留所有權利
 .gitignore             至少要有drafts/
 .nojekyll              讓GitHub Pages直接放檔案，不經過Jekyll處理
 data/
