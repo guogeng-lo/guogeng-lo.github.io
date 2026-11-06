@@ -2,8 +2,25 @@
   "id": "last-train",
   "title": "00:13末班車",
   "summary": "深夜車站的站務員Agent：可以被說服去查證，不能被說服去違規。",
-  "status": "prototype",
-  "status_evidence": [],
+  "status": "completed",
+  "status_evidence": [
+    {
+      "label": "v2.2單元測試紀錄：PASS 105、KNOWN 1、FAIL 0（不呼叫API）",
+      "file": "docs/evidence/last-train-unit-tests.md"
+    },
+    {
+      "label": "Gradio實測截圖：T014已核發登車許可",
+      "file": "assets/img/last-train/01-boarding.png"
+    },
+    {
+      "label": "Gradio實測截圖：T015非本人持有，未獲得授權",
+      "file": "assets/img/last-train/02-t015-rejected.png"
+    },
+    {
+      "label": "模型實測截圖：20題，PASS 18、REVIEW 2、FAIL 0",
+      "file": "assets/img/last-train/03-agent-tests.png"
+    }
+  ],
   "updated": "2026-11-06",
   "context": "course",
   "course": "生成式AI（TAICA，政大開課）",

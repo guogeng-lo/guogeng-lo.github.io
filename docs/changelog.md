@@ -1,5 +1,17 @@
 # 修改紀錄
 
+## 2026-11-06 修改：last-train
+- 依使用者本次要求，將`data/works/last-train.json`的`status`從`prototype`改為`completed`；`updated`維持本次修改日期2026-11-06
+- `status_evidence`引用既有的`docs/evidence/last-train-unit-tests.md`及3張實測截圖：T014核發登車許可、T015未獲得授權、20題模型測試結果；逐一讀取確認檔案內容，沒有新增測試結果或編造證據
+- 執行既有`build.py`重新產生`index.html`與`works/last-train/index.html`，首頁與作品頁都顯示「已完成」；本次共修改上述3個檔案及`docs/changelog.md`
+- validate.py結果：4個作品，錯誤0個、警告1個，警告原文：
+  - `[警告] data/works/last-train.json：status從prototype升到completed，請人工確認證據是否真的足夠`
+- 警告確認依據：使用者2026-11-06在本次對話明確要求「把00:13末班車的狀態改成已完成，直接改就好，改完幫我上傳。」；升級及上傳依此指示執行
+- 瀏覽器確認：首頁與作品頁在桌面912像素及手機375像素均無水平溢出；作品頁3張圖片均成功載入，完成證據連結均指向既有公開檔案
+- 需要人工確認的疑慮：既有單元測試仍有KNOWN 1，模型實測仍有REVIEW 2，其中一題確實回答錯誤；本次沒有重新執行Agent或模型測試。保留原有測試數字、已知限制及技術筆記，完成判定依使用者本次要求
+- 依使用者指示調整流程：第5、11節的狀態升級確認引用本次明確指示，不重複詢問；完成證據仍使用既有真實紀錄
+- 誰做的：Codex依使用者本次指示修改、建置並驗證
+
 ## 2026-11-06 修改：my-dungeon-game（依最新版規則修正PR #1）
 - 合併main的6e87267ae123a3d5588bde1a34c2f2d6138f3e60並重讀AGENTS.md全文；保留main與PR原有的修改紀錄，解決changelog的合併衝突
 - 修改`data/works/my-dungeon-game.json`：移除「依素材筆記」「素材筆記記錄」「這次作品頁整理」等整理過程文字；內容來源仍是`docs/raw/my-dungeon-game/notes.md`與該資料夾的5張試玩截圖，這次未重新編譯或執行遊戲

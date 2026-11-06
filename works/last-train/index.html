@@ -24,7 +24,7 @@
 <main id="main">
   <header class="work-head">
     <div class="wrap">
-      <p class="meta"><span class="status status-prototype">原型</span><span>課堂作業</span><span>生成式AI（TAICA，政大開課）</span><span>2026-10</span></p>
+      <p class="meta"><span class="status status-completed">已完成</span><span>課堂作業</span><span>生成式AI（TAICA，政大開課）</span><span>2026-10</span></p>
       <h1 class="work-title">00:13末班車</h1>
       <p class="work-summary">深夜車站的站務員Agent：可以被說服去查證，不能被說服去違規。</p>
       <p class="chips"><span class="chip">Python</span><span class="chip">Groq API</span><span class="chip">Gradio</span><span class="chip">aisuite</span></p>
@@ -35,7 +35,7 @@
     <div class="wrap">
       <div class="gallery"><figure class="shot reveal"><img src="../../assets/img/last-train/01-boarding.png" alt="Gradio畫面：站務員用validate_boarding預審T014搭N013，點開可以看到模型輸出的JSON和Python的執行結果，右邊是官方登車狀態、站內時間、口袋和用量" loading="eager"><figcaption>每一步模型輸出的JSON和Python實際跑出來的結果都可以點開看。右邊的官方狀態只從Python畫出來。</figcaption></figure><figure class="shot reveal"><img src="../../assets/img/last-train/02-t015-rejected.png" alt="玩家說撿到一張T015，站務員有去預審，Python回傳T015不是玩家持有的車票，右邊官方狀態維持尚未獲得授權" loading="lazy"><figcaption>說服它去查可以，但查完不符合，官方狀態就不會變。</figcaption></figure><figure class="shot reveal"><img src="../../assets/img/last-train/03-agent-tests.png" alt="Colab裡Agent實測的輸出：A到S加Q1、Q2共20題的結果，最後一行是PASS 18、REVIEW 2、FAIL 0，共65380 tokens" loading="lazy"><figcaption>真的呼叫模型的20題測試結果。</figcaption></figure></div>
       <div class="metrics"><div class="metric reveal"><p class="metric-value">106題</p><p class="metric-label">單元測試：PASS 105、KNOWN 1、FAIL 0</p><p class="metric-condition">不呼叫API，用假的模型照順序吐出準備好的JSON。只代表Python的規則有照設計在跑，不代表真的模型會選對工具</p><p class="metric-source"><a href="https://github.com/guogeng-lo/guogeng-lo.github.io/blob/main/docs/evidence/last-train-unit-tests.md" rel="noopener">看紀錄</a></p></div><div class="metric reveal"><p class="metric-value">20題</p><p class="metric-label">真的呼叫模型：PASS 18、REVIEW 2、FAIL 0</p><p class="metric-condition">Groq的gpt-oss-120b，v2.2每題跑一次，共65,380 tokens。REVIEW是自動檢查標出來要人工看的，其中一題真的講錯</p><p class="metric-source"><a href="https://github.com/guogeng-lo/guogeng-lo.github.io/blob/main/assets/img/last-train/03-agent-tests.png" rel="noopener">看紀錄</a></p></div></div>
-      
+      <div class="evidence"><h3>完成的證據</h3><ul class="list"><li><a href="https://github.com/guogeng-lo/guogeng-lo.github.io/blob/main/docs/evidence/last-train-unit-tests.md" rel="noopener">v2.2單元測試紀錄：PASS 105、KNOWN 1、FAIL 0（不呼叫API）</a></li><li><a href="https://github.com/guogeng-lo/guogeng-lo.github.io/blob/main/assets/img/last-train/01-boarding.png" rel="noopener">Gradio實測截圖：T014已核發登車許可</a></li><li><a href="https://github.com/guogeng-lo/guogeng-lo.github.io/blob/main/assets/img/last-train/02-t015-rejected.png" rel="noopener">Gradio實測截圖：T015非本人持有，未獲得授權</a></li><li><a href="https://github.com/guogeng-lo/guogeng-lo.github.io/blob/main/assets/img/last-train/03-agent-tests.png" rel="noopener">模型實測截圖：20題，PASS 18、REVIEW 2、FAIL 0</a></li></ul></div>
     </div>
   </section>
   <div class="details">
